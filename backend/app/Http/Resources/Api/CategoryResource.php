@@ -9,6 +9,12 @@ class CategoryResource extends ResourceCollection
 {
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            "id" => $this->id,
+            "name" => $this->name,
+            "slug" => $this->slug,
+            "description" => $this->description,
+            "is_active" => $this->is_active,
+        ];
     }
 }
